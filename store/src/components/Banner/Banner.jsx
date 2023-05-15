@@ -1,10 +1,26 @@
-import styles from "../../styles/Banner.module.css";
+import styles from "../../styles/Home.module.css";
+import bannerImg from "../../images/banner.png";
 
 const Banner = () => {
   return (
-    <div>
-      <p>Hello, I am a functional component!</p>
-    </div>
+    <section className={styles.banner}>
+      <div className={styles.left}>
+        <p className={styles.content}>
+          NEW YEAR
+          <span>SALE</span>
+        </p>
+        <button className={styles.more}>See more</button>
+      </div>
+
+      <div
+        className={styles.right}
+        style={{ backgroundImage: `url(${bannerImg})` }}
+      >
+        <p className={styles.discount}>
+          save up to <span>50%</span> off
+        </p>
+      </div>
+    </section>
   );
 };
 
